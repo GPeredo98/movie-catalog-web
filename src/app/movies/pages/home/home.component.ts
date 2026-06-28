@@ -4,11 +4,10 @@ import { MoviesService } from '../../services/movies.service';
 import { MovieCardComponent } from "../../components/movie-card/movie-card.component";
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [MovieCardComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+    selector: 'app-home',
+    imports: [MovieCardComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
 

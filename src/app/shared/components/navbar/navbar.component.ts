@@ -5,11 +5,10 @@ import { AutoCompleteCompleteEvent } from 'primeng/autocomplete';
 import { MoviesService } from 'src/app/movies/services/movies.service';
 
 @Component({
-  selector: 'navbar',
-  standalone: true,
-  imports: [SharedModule],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+    selector: 'navbar',
+    imports: [SharedModule],
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
   public search: string = '';
