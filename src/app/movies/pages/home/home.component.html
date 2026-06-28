@@ -1,8 +1,7 @@
-<p>home works!</p>
-<button (click)="logout()">Logout</button>
-
-@for (movie of movieList; track $index) {
-    <span>{{ movie.name }}</span>
-}
+<div class="movies-container">
+    @for (movie of movieList; track $index) {
+        <movie-card [title]="movie.name" [imagePoster]="movie.imagePoster" [score]="movie.score"></movie-card>
+    }
+</div>
 
 <button (click)="addMovie()">add movie</button>

@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MoviesService } from '../../services/movies.service';
+import { MovieCardComponent } from "../../components/movie-card/movie-card.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [MovieCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -20,11 +21,6 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this._getMovies();
-  }
-
-  public logout(): void {
-    localStorage.clear();
-    this._router.navigate(['/login']);
   }
 
   public addMovie(): void {

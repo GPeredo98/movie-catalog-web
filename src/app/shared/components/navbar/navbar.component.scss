@@ -1,0 +1,12 @@
+.navbar-container {
+    background-color: #ffffffb1;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}

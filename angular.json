@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-primeng-moviecatalog": {
+    "movie-catalog-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,8 +17,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-primeng-moviecatalog",
-            "baseHref": "/Angular-PrimeNG-MovieCatalog/",
+            "outputPath": "dist/movie-catalog-web",
+            "baseHref": "/movie-catalog-web/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -50,7 +50,7 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/Angular-PrimeNG-MovieCatalog/"
+              "baseHref": "/movie-catalog-web/"
             },
             "development": {
               "optimization": false,
@@ -64,10 +64,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-primeng-moviecatalog:build:production"
+              "buildTarget": "movie-catalog-web:build:production"
             },
             "development": {
-              "buildTarget": "angular-primeng-moviecatalog:build:development"
+              "buildTarget": "movie-catalog-web:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -75,7 +75,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "angular-primeng-moviecatalog:build"
+            "buildTarget": "movie-catalog-web:build"
           }
         },
         "test": {

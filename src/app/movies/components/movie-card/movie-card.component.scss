@@ -1,0 +1,16 @@
+.poster {
+    width: 200px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card {
+    cursor: pointer;
+    height: 280px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.movie-card:hover {
+    box-shadow: 0 5px 40px rgba(0, 0, 0, 0.5);
+    transform: scale(1.05); 
+}

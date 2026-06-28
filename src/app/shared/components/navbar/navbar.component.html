@@ -1,0 +1,29 @@
+<div class="navbar-container">
+    <div class="left-items">
+        <img src="assets/images/logo.png" width="40">
+    </div>
+    <div class="middle-items">
+        <p-iconField iconPosition="left">
+            <p-inputIcon styleClass="pi pi-search" />
+            <p-autoComplete
+                [(ngModel)]="search" 
+                [suggestions]="movieListFiltered" 
+                (completeMethod)="filterMovies($event)"
+                placeholder="Search"
+                field="name">
+                    <ng-template let-country pTemplate="item">
+                        <div class="flex align-items-center gap-2">
+                            <img 
+                                src="https://primefaces.org/cdn/primeng/images/demo/flag/flag_placeholder.png" 
+                                [class]="'flag flag-' + country.code.toLowerCase()" 
+                                style="width: 18px" />
+                            <div>{{ country.name }}</div>
+                        </div>
+                    </ng-template>
+            </p-autoComplete>
+        </p-iconField>
+    </div>
+    <div class="right-items">
+        <p-button label="Logout" [rounded]="true" size="small" (click)="logout()"></p-button>
+    </div>
+</div>
